@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRADOVA PARTS - Güvenilir Yedek Parça Çözümleri</title>
+    <meta name="description" content="Aracınızın performansını ve güvenliğini artırmak için uluslararası kalite standartlarında, dayanıklı ve erişilebilir yedek parçalar.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Özel Renk ve Font Tanımlamaları */
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-light: #181818;
+            --gold: #D4AF37; /* Sofistike bir altın rengi */
+            --gold-dark: #B8860B; /* Vurgu için daha koyu altın */
+            --text-light: #E5E7EB;
+            --text-dark: #9CA3AF;
+        }
+        html {
+            scroll-behavior: smooth; /* Sayfa içi geçişleri yumuşatır */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1551522435-a131bf534d3b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Paralaks efekti için */
+        }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        .hover\:bg-gold-dark:hover { background-color: var(--gold-dark); }
+        .focus\:ring-gold:focus {
+            --tw-ring-color: var(--gold);
+        }
+        
+        /* Kaydırma Animasyonları */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigasyon -->
+    <header class="bg-black/50 backdrop-blur-lg shadow-lg shadow-black/30 sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white flex items-center gap-3">
+                <!-- LOGO GÜVENLİ BİR YER TUTUCU İLE DEĞİŞTİRİLDİ -->
+                <img src="https://placehold.co/250x80/0a0a0a/D4AF37?text=TRADOVA+PARTS" alt="Tradova Parts Logo" class="h-12">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-gold transition duration-300">Ana Sayfa</a>
+                <a href="#about" class="text-gray-300 hover:text-gold transition duration-300">Hakkımızda</a>
+                <a href="#products" class="text-gray-300 hover:text-gold transition duration-300">Ürünler</a>
+                <a href="#contact" class="bg-gold text-black font-semibold px-5 py-2 rounded-full hover:bg-gold-dark transition duration-300">İletişim</a>
+            </div>
+            <!-- Mobil Menu Butonu -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobil Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <a href="#home" class="block py-3 px-4 text-sm text-gray-300 hover:bg-gray-800">Ana Sayfa</a>
+            <a href="#about" class="block py-3 px-4 text-sm text-gray-300 hover:bg-gray-800">Hakkımızda</a>
+            <a href="#products" class="block py-3 px-4 text-sm text-gray-300 hover:bg-gray-800">Ürünler</a>
+            <a href="#contact" class="block py-3 px-4 text-sm text-gray-300 hover:bg-gray-800">İletişim</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Ana Karşılama Bölümü -->
+        <section id="home" class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-40 text-center flex flex-col items-center justify-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 reveal">Güvenilir Yedek Parçanın Kaynağı</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto reveal" style="transition-delay: 200ms;">Otomotiv sektöründeki tecrübemizi ve tutkumuzu, yoldaki herkes için güvenilir ve yüksek performanslı yedek parçalar üretmek üzere birleştirdik.</p>
+                <a href="#products" class="bg-gold text-black font-bold py-3 px-10 rounded-full hover:bg-gold-dark transition duration-300 text-lg reveal" style="transition-delay: 400ms;">Ürünleri Keşfet</a>
+            </div>
+        </section>
+
+        <!-- Hakkımızda Bölümü -->
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1617855879393-3a105a553554?q=80&w=1964&auto=format&fit=crop" class="rounded-lg shadow-2xl shadow-black/40" alt="Tradova Kalite Anlayışı">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-white">Kalite Bir Standart Değil, <span class="text-gold">Bir Taahhüttür.</span></h2>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Tradova'yı seçtiğinizde sadece bir yedek parça satın almazsınız; yolculuğunuzun her adımında size eşlik edecek bir kalite ve güvenilirlik mirasına yatırım yaparsınız.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gold mb-2">Misyonumuz</h4>
+                                <p class="text-gray-300 text-sm">Müşterilerimize uluslararası kalite standartlarında, dayanıklı ve erişilebilir yedek parçalar sunarak araçların performansını ve güvenliğini artırmak.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gold mb-2">Vizyonumuz</h4>
+                                <p class="text-gray-300 text-sm">Türkiye'den doğan markamızı, güvenilirlik ve kalite konusunda dünya çapında tanınan lider üreticilerden biri haline getirmek.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ürünler Bölümü -->
+        <section id="products" class="py-20 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-bold text-white">Ürün Kataloğumuz</h2>
+                    <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Her bir Tradova parçası, aracınızdan en iyi şekilde yararlanmanız ve sürüş güvenliğinizi en üst düzeye çıkarmanız için titiz bir mühendislik sürecinden geçer.</p>
+                </div>
+
+                <!-- Marka Grupları -->
+                <div class="space-y-16">
+
+                    <!-- RENAULT GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">RENAULT GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 BOTTOM SHELF CARDBOARD WITH LEATHER</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 LUGGAGE COVER CARDBOARD SW -EM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 LUGGAGE SIDE CARTON CREASED EM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 LUGGAGE SIDE CARTON SMALL EM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 LUGGAGE COVER CARDBOARD YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 LUGGAGE SIDE CARTON CREASED YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 LUGGAGE SIDE CARTON SMALL YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 PEDAL SIDE CARTON</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 SHOCK ABSORBER COVER YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 HOOD COVER</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 SPARE WHEEL COVER</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 SPARE WHEEL BELT</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 BATTERY SUPPLIES</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 INNER CHEST SEAL</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 CURVED CARDBOARD (BONE)</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 TRUNK CARPET SW -YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 TRUNK CARPET TL-TS</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 9 TRUNK CARPET</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 FRONT CHEST CARPET</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 REAR WINDOW CARPET TL -TS</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 OUTSIDE REARVIEW MIRROR LEFT</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 OUTSIDE REARVIEW MIRROR RIGHT</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 CEILING TILE FREQUENCY STW</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 CEILING TILE FREQUENCY TS</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 ROOF SIDE PANEL TL -TS</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 12 INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 9 INNER SUN VISOR LEFT</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 9 INNER SUN VISOR RIGHT</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">KANGOO 1 INNER SUNSHADE (DARK GRAY) EM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">KANGOO 2 INNER SUNSHADE (LIGHT GRAY) YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MEGANE 1 INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">R 19 INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">CLIO - SYMBOL INNER SUNSHADE EM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">CLIO - SYMBOL INNER SUNSHADE (LIGHT GRAY) YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">RENAULT MASTER II INTERIOR SUN VISOR (NEW PRODUCT)</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- DACIA GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">DACIA GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DACIA DUSTER - SANDERO INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DACIA LOGAN INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DACIA DOKKER LODGY INTERIOR SUNSHADE (NEW PRODUCT)</h4></div>
+                        </div>
+                    </div>
+                    
+                    <!-- FORD GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">FORD GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FORD FOCUS -1 INTERIOR SUN VISOR 1998-2004</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FORD FOCUS - 2 INNER SUN VISOR 2005-2011</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FORD FIESTA INTERIOR SUN VISOR 2002-2008</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FORD CONNECT INTERIOR SUN VISOR LOW ROOF 2002-2013</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FORD CONNECT INTERIOR SUN VISOR HIGH ROOF 2002-2013</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FORD TOURNEO CONNECT YM INTERIOR SUN VISOR (NEW PRODUCT)</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FORD TOURNEO COURIER INTERIOR SUN VISOR (NEW PRODUCT)</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- FIAT GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">FIAT GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DOBLO 3 INNER SUNSHADE YM (NEW PRODUCT)</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DOBLO INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DOGAN SLX INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">M 131 INTERIOR SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT LINEA - PUNTO INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIORINO - NEMO - BIPPER INNER SUNSHADE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT TEMPRA - TYPE INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT UNO -S INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT PALIO - ALBEA INTERIOR SUNSHADE GRAY</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT PALIO - ALBEA INTERIOR SUN VISOR WHITE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">M 131 CEILING TILE 5- WIRE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DOGAN-ŞAHİN CEILING TILE 4-WIRE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">EAGLE CEILING TILE 85-86-87 8 WIRE</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DOGAN SLX GEAR LEVER BELLOW</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PALIO - SIENA SHIFT LEVER BELLOW</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">UNO GEAR LEVER BELLOW</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">M 124 PEDAL SIDE CARTON</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">M 131 FRONT CHEST CARPET</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DOĞAN ŞAHİN FRONT CHEST CARPET YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DOĞAN ŞAHİN REAR WINDOW CARPET YM</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT EGEA INTERIOR SUN SHIELD</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT DUCATO 3 INTERIOR SUN VISOR (NEW PRODUCT)</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT DUCATO 3 INTERIOR SUN VISOR WITH BASKET (NEW PRODUCT)</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">DUCATO II INNER SUN VISOR 2002-2006</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT PANDA INTERIOR SUN VISOR 2003-2012</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FIAT PANDA INTERIOR SUN VISOR 2012-2023 YM</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- HYUNDAI GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">HYUNDAI GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI İ20 INTERIOR SUN VISOR 2009-2018</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI İ30 INTERIOR SUN VISOR 2008-2012</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI IX35 INTERIOR SUN VISOR 2010-2015</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI ACCENT INTERIOR SUN VISOR 1995 -1999</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">H 100 HYUNDAI - L 300 MITSUBISHI INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">H 100 HYUNDAI PORTER INTERIOR SUN VISOR 2006 - 2016</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI ADMIRE INTERIOR SUN VISOR 2000 -2006</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI ACCENT ERA INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI GETZ INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HYUNDAI İ10 INTERIOR SUN VISOR</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- TOYOTA GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">TOYOTA GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA AE 92 INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA AE 101 INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA AE 111 INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA COROLLA INTERIOR SUN VISOR 2003-2007</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA COROLLA INTERIOR SUN VISOR 2007-2013 (E150)</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA AURIS INTERIOR SUN VISOR 2007-2013</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA YARIS INTERIOR SUN VISOR 2007-2013</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOYOTA RAV4 INTERIOR SUN VISOR 2006-2012</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- MAZDA GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">MAZDA GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MAZDA 626 INTERIOR SUN VISOR 1988-1991</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MAZDA 323 INTERIOR SUN VISOR 1990-1997</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MAZDA 323 FAMILY INTERIOR SUN VISOR 1998-2001</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- MITSUBISHI GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">MITSUBISHI GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MITSUBISHI PICKUP FUSO CANTER 859 2006-2012</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MITSUBISHI PICKUP TRUCK INTERIOR SUN VISOR FE.304-444-449-H350 1990-1997</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MITSUBISHI PICKUP TRUCK INTERIOR SUN VISOR FE.659-515-635- 519 1998-2007</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MITSUBISHI L200 PICK-UP INTERIOR SUN VISOR GRAY 1988-1999</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MITSUBISHI L200 PICK-UP INTERIOR SUN VISOR BROWN 1988-1999</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MITSUBISHI L200 PICK-UP INTERIOR SUN VISOR GRAY 2006-2014</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- SKODA GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">SKODA GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">SKODA FELICIA INTERIOR SUN VISOR 1995-2001</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">SKODA FABIA INTERIOR SUN VISOR 2001-2008</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">SKODA SUPERB - OCTAVIA INTERIOR SUN VISOR 2000-2008</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">SKODA FABIA ROOMSTER INTERIOR SUN VISOR 2008-2014</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">FAVORITE - FORMAN - PICK-UP INNER SUNSHADE 2000-2008</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- VOLKSWAGEN-SEAT GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">VOLKSWAGEN-SEAT GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">VW POLO CLASSIC INTERIOR SUN VISOR 1994 -2003</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">GOLF 4 / 98-05 - BORA / 98-05 - PASSAT/97-05 INTERIOR SUN SHIELD</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">TOLEDO / 1999-2004 - LEON /2000-2005 INTERIOR SUN SHIELD</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">CADDY INTERIOR SUNSHADE 2004-2018</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">VW GOLF-3 - JETTA INTERIOR SUN VISOR 1993-1998</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">VW POLO INTERIOR SUN VISOR 1993-1998</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- OPEL GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">OPEL GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL CORSA - B INTERIOR SUN SHIELD</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL CORSA -C INTERIOR SUN VISOR 2001-2007</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL CORSA - D INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL ASTRA -F INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL ASTRA -G INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL VECTRA -A INTERIOR SUN VISOR 1990-1995</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL VECTRA -B INTERIOR SUN VISOR 1996-2001</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">OPEL COMBO INTERIOR SUN VISOR 2002-2011</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- HONDA GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">HONDA GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HONDA CIVIC INTERIOR SUN VISOR 1996-2001</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HONDA CIVIC INTERIOR SUN VISOR 2001-2005</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">HONDA CIVIC HATCHBACK INTERIOR SUN VISOR 2001-2005</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- PEUGEOT GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">PEUGEOT GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT PARTNER INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT BOXER II INTERIOR SUN VISOR 2002-2006</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT BIPPER INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT 206 INTERIOR SUN VISOR 1999-2008</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT 207 INTERIOR SUN VISOR 2006 -2013</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT 306 INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT 307 INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT 301 INTERIOR SUN VISOR</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">PEUGEOT 106 INTERIOR SUN VISOR</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- LADA GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">LADA GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">LADA VEGA INTERIOR SUN VISOR (NEW PRODUCT)</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">LADA SAMARA INTERIOR SUN VISOR (NEW PRODUCT)</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- MERCEDES-BENZ GROUP -->
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold text-gold mb-8 border-b-2 border-gold/30 pb-4">MERCEDES-BENZ GROUP</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MERCEDES-BENZ INTERIOR SUN VISOR SMALL 2521-2524</h4></div>
+                            <div class="bg-gray-900 rounded-lg p-4 text-center"><h4 class="font-medium text-gray-300">MERCEDES-BENZ INTERIOR SUN VISOR LARGE 2521-2524</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim Bölümü -->
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 reveal">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white">Bizimle İletişime Geçin</h2>
+                    <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Parça talepleriniz, iş ortaklığı ve diğer tüm sorularınız için bize ulaşabilirsiniz.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-black p-8 rounded-lg shadow-2xl shadow-black/40">
+                    <div class="flex flex-col md:flex-row gap-12">
+                        <!-- İletişim Formu -->
+                        <div class="md:w-2/3">
+                            <form action="https://formspree.io/f/sizin_form_id_niz" method="POST">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <input type="text" name="name" placeholder="Adınız Soyadınız" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold text-white" required>
+                                    <input type="email" name="email" placeholder="E-posta Adresiniz" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold text-white" required>
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" name="subject" placeholder="Konu" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold text-white" required>
+                                </div>
+                                <div class="mb-4">
+                                    <textarea name="message" placeholder="Mesajınız..." rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold text-white" required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-gold text-black font-bold py-3 px-6 rounded-lg hover:bg-gold-dark transition duration-300">Mesajı Gönder</button>
+                            </form>
+                        </div>
+                        <!-- İletişim Bilgileri -->
+                        <div class="md:w-1/3">
+                            <h3 class="text-2xl font-bold mb-4 text-white">Bilgilerimiz</h3>
+                            <ul class="space-y-4 text-gray-300">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    <a href="tel:+905061947836" class="hover:text-gold">+90 506 194 78 36</a>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    <a href="mailto:tradova@tradovaparts.info" class="hover:text-gold">tradova@tradovaparts.info</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 TRADOVA PARTS. Tüm Hakları Saklıdır.</p>
+            <p class="text-sm text-gray-500 mt-2">The Source of Reliable Spare Parts.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobil menüyü açıp kapatma
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sayfa kaydırıldıkça animasyonları tetikleme
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Elementin %10'u göründüğünde animasyon başlar
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
